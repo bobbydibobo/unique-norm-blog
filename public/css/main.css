@@ -1,0 +1,369 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Khand', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: whitesmoke;
+}
+
+body {
+  background-color: #2b2b2b;
+  color: whitesmoke;
+}
+
+.current {
+  color: #ee9b02;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  padding: 1vh 1vw;
+  width: 100%;
+  border-bottom: 2px solid #ee9b02;
+  background-image: url(/img/bgheader.jpg);
+}
+
+.logo .headTitle {
+  font-size: 5rem;
+  padding-top: 14vh;
+}
+
+.logo span {
+  color: #ee9b02;
+}
+
+.navigation {
+  width: 100%;
+  border-bottom: 2px solid #ee9b02;
+  background-color: #202020;
+  height: 10%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  margin-bottom: 3vh;
+}
+
+.navigation ul {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  list-style: none;
+}
+
+.navigation li {
+  font-size: 1.4rem;
+  font-weight: normal;
+  width: 20vw;
+  text-align: center;
+  padding: 0vh 5vw;
+}
+
+.navigation li:hover {
+  background-color: #ee9b02;
+  color: #2b2b2b;
+}
+
+.navigation svg {
+  cursor: pointer;
+}
+
+.navigation svg:hover {
+  fill: #ee9b02;
+}
+
+.addProject {
+  font-size: 4rem;
+  line-height: .5;
+  padding-top: 1vh;
+}
+
+.addProject:hover {
+  color: #ee9b02;
+}
+
+.blogArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 3vh;
+  width: 100%;
+  overflow: hidden;
+}
+
+.blogArea .sideOne {
+  position: fixed;
+  top: 75vh;
+  right: -18vw;
+}
+
+.blogArea .sideTwo {
+  position: fixed;
+  top: 75vh;
+  left: -18vw;
+}
+
+.blogArea .postArea {
+  width: 50%;
+  margin: 3vh 0;
+  padding: 1rem;
+  border-radius: 1rem;
+  background-color: #cc8500;
+}
+
+.blogArea .postArea:hover {
+  box-shadow: 0px 0px 10px #ee9b02;
+}
+
+.blogArea .postArea .postTitle {
+  font-size: 2rem;
+  color: #202020;
+}
+
+.blogArea .postArea .atmDate {
+  font-size: 1.1rem;
+  color: #2b2b2b;
+}
+
+.blogArea .postArea .postTeaser {
+  margin-top: 2vh;
+  color: #202020;
+  font-size: 1.3em;
+  font-weight: medium;
+}
+
+.blogArea .postArea .actionBtns {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  border-top: 3px solid #2b2b2b;
+  margin-top: 2vh;
+}
+
+.blogArea .postArea .actionBtns .readMoreBtn, .blogArea .postArea .actionBtns .editBtn {
+  width: 100%;
+  text-align: center;
+  padding-top: 2vh;
+}
+
+.blogArea .postArea .actionBtns .readMoreBtn svg, .blogArea .postArea .actionBtns .editBtn svg {
+  fill: #2b2b2b;
+  opacity: .7;
+}
+
+.blogArea .postArea .actionBtns .readMoreBtn svg:hover, .blogArea .postArea .actionBtns .editBtn svg:hover {
+  opacity: 1;
+}
+
+.blogArea .postArea .actionBtns .deleteForm .deleteBtn {
+  background-color: #cc8500;
+  color: #202020;
+  border: 3px solid #202020;
+  border-radius: 2rem;
+  padding: .5rem;
+  width: 150%;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+
+.blogArea .postArea .actionBtns .deleteForm .deleteBtn:hover {
+  background-color: #202020;
+  color: #ee9b02;
+}
+
+.showPostArea {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 80%;
+  margin: 3vh auto;
+  background-color: #ee9b02;
+  padding: 1rem;
+  border-radius: 1rem;
+  color: #2b2b2b;
+}
+
+.showPostArea h1 {
+  border-bottom: 3px solid #2b2b2b;
+}
+
+.goal, .process, .outcome {
+  margin-bottom: 2vh;
+}
+
+.atmDate {
+  margin-bottom: 4vh;
+  color: #464646;
+}
+
+.newAndEdit {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.newAndEdit h1 {
+  font-weight: bold;
+  color: #ee9b02;
+  border-bottom: 3px solid whitesmoke;
+}
+
+.form-group label {
+  color: #ee9b02;
+  font-size: 1.5rem;
+}
+
+.form-group input, .form-group textarea {
+  color: #202020;
+}
+
+.saveBtn {
+  border: none;
+  background: none;
+  margin: 2vh auto;
+  width: 100%;
+  cursor: pointer;
+}
+
+.saveBtn svg:hover {
+  fill: #ee9b02;
+}
+
+.deleteBtn {
+  border: none;
+  background: none;
+  width: 100%;
+  cursor: pointer;
+}
+
+.deleteBtn svg:hover {
+  fill: #ee9b02;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  background-color: #ee9b02;
+  position: fixed;
+  bottom: 0;
+  color: #2b2b2b;
+  margin-top: 5vh;
+}
+
+.gameBody {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: auto auto;
+  height: 100vh;
+}
+
+.gameBody .simpleGame {
+  width: 1000px;
+  height: 400px;
+  border: 3px solid #ee9b02;
+  overflow: hidden;
+}
+
+.gameBody .simpleGame .char {
+  width: 40px;
+  height: 100px;
+  background-color: #ee9b02;
+  position: relative;
+  top: 295px;
+  left: 50px;
+  overflow: hidden;
+}
+
+.gameBody .simpleGame .jumpAnimate {
+  animation: jump .5s;
+}
+
+.gameBody .simpleGame .block {
+  width: 40px;
+  height: 40px;
+  background-color: #ee9b02;
+  position: relative;
+  top: 255px;
+  left: 955px;
+  animation: move 2000ms linear infinite;
+  overflow: hidden;
+}
+
+@keyframes move {
+  0% {
+    left: 955px;
+  }
+  100% {
+    left: -80px;
+  }
+}
+
+@keyframes jump {
+  0% {
+    top: 295px;
+  }
+  30% {
+    top: 195px;
+  }
+  70% {
+    top: 195px;
+  }
+  100% {
+    top: 295px;
+  }
+}
+
+.score .actualScore {
+  text-align: center;
+}
+
+.lightMode {
+  background-color: whitesmoke;
+}
+
+.lightBlog {
+  color: whitesmoke;
+  border-color: whitesmoke;
+}
+
+@media only screen and (max-width: 768px) {
+  .logo .headTitle {
+    font-size: 30px;
+  }
+  .logo img {
+    width: 75px;
+  }
+  .sideImages img {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .logo .headTitle {
+    padding-bottom: 20px;
+    font-size: 25px;
+  }
+  .logo img {
+    width: 60px;
+  }
+  .postArea {
+    width: 90vh;
+  }
+}
+/*# sourceMappingURL=main.css.map */

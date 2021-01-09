@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+  <title>Unique:Norm</title>
+</head>
+<body>
+      <div class="logo">
+        <img src="img/uniqueleft.svg" alt="logo" width="150px">
+      <h1 class="headTitle"><span>&lt;</span>unique<span>|</span>norm<span>&gt;</span></h1>
+      <img src="img/uniqueright.svg" alt="logo" width="150px">
+      </div>
+      <div class="navigation">
+        <a href="/posts/new" class="addProject">+</a>
+        <ul>
+          <a href="http://localhost:5000/#" class="current"><li>blog</li></a>
+        </ul>
+        <svg id="mode" xmlns="http://www.w3.org/2000/svg" fill="rgb(245, 245, 245)" width="30" height="30" viewBox="0 0 24 24">
+          <path d="M16 0l-3 9h9l-1.866 2h-14.4l10.266-11zm2.267 13h-14.4l-1.867 2h9l-3 9 10.267-11z"/>
+        </svg>
+    </div>
+
+    
+
+    <div class="blogArea">
+
+      <div class="sideImages">
+        <img src="img/sideImgTwo.svg" alt="sideOne" class="sideOne" width="400px">
+        <img src="img/sideImgTwo.svg" alt="sideOne" class="sideTwo" width="400px">
+      </div>
+
+    <% posts.forEach(post => { %>
+      <div class="postArea">
+          <h4 class="postTitle"><%= post.title %></h4>
+          <div class="atmDate">
+            <%= post.createdAt.toLocaleDateString() %>
+          </div>
+          <div class="postTeaser"><%= post.teaser %></div>
+
+          <div class="actionBtns">
+            <a href="posts/<%= post.slug %>" class="readMoreBtn"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="rgb(245, 245, 245)" viewBox="0 0 24 24"><path d="M16 8v-4l8 8-8 8v-4h-5v-8h5zm-7 0h-2v8h2v-8zm-4.014 0h-1.986v8h1.986v-8zm-3.986 0h-1v8h1v-8z"/></svg></a>
+          </div>
+      </div>
+    <% }) %>
+  </div>
+
+  <footer>
+    <h6>&#169;<span>&lt;</span>unique<span>|</span>norm<span>&gt;</span></h6>
+  </footer>
+
+<script>
+
+  const modeBtn = document.getElementById('mode');
+  const body = document.querySelector('body');
+
+  let mode = true; // darkmode
+
+  modeBtn.addEventListener('click', () => {
+    if(mode){
+      body.classList.add('lightMode');
+      mode = false;
+    } else {
+      body.classList.remove('lightMode');
+      mode = true;
+    }
+  });
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,361 @@
+@import './reset';
+@import './colorPalette';
+@import './mixin';
+
+body{
+    background-color: $primDarkColor;
+    color: $textDarkColor;
+}
+
+.current{
+    color: $secDarkColor;
+}
+
+    .logo{
+        @include displayFlex(row);
+        padding: 1vh 1vw;
+        width: 100%;
+        border-bottom: 2px solid $secDarkColor;
+        background-image: url(/img/bgheader.jpg);
+
+        .headTitle{
+            font-size: 5rem;
+            padding-top: 14vh;
+
+        }
+        & span {
+            color: $secDarkColor;
+        }
+    }
+
+    .navigation{
+        width: 100%;
+        border-bottom: 2px solid $secDarkColor;
+        background-color: $navColor;
+        height: 10%;
+        @include displayFlexAround(row);
+        margin-bottom: 3vh;
+
+        & ul {
+            @include displayFlexAround(row);
+            list-style: none;
+        }
+
+        & li {
+            font-size: 1.4rem;
+            font-weight: normal;
+            width: 20vw;
+            text-align: center;
+            padding: 0vh 5vw;
+
+            &:hover {
+                background-color: $secDarkColor;
+                color: $primDarkColor;
+            }
+
+        }
+
+        svg{
+            cursor: pointer;
+
+            &:hover{
+                fill: $secDarkColor;
+            }
+        }
+
+ 
+    }
+
+    .addProject {
+        font-size: 4rem;
+        line-height: .5;
+        padding-top: 1vh;
+
+        &:hover{
+            color: $secDarkColor;
+        }
+    }
+
+    .blogArea{
+        @include displayFlex(column);
+        margin-top: 3vh;
+        width: 100%;
+        overflow: hidden;
+
+            .sideOne{
+                position: fixed;
+                top: 75vh;
+                right: -18vw;
+            }
+
+            .sideTwo{
+                position: fixed;
+                top: 75vh;
+                left: -18vw;
+            }
+        
+
+        .postArea{
+            width: 50%;
+            margin: 3vh 0;
+            padding: 1rem;
+            border-radius: 1rem;
+            background-color: rgb(204, 133, 0);
+            
+
+            &:hover{
+                box-shadow: 0px 0px 10px $secDarkColor;
+            }
+
+            .postTitle{
+                font-size: 2rem;
+                color: $navColor;
+            }
+
+            .atmDate{
+                font-size: 1.1rem;
+                color: $primDarkColor;
+            }
+
+            .postTeaser {
+                margin-top: 2vh;
+                color: $navColor;
+                font-size: 1.3em;
+                font-weight: medium;
+            }
+
+            .actionBtns{
+                @include displayFlexAround(row);
+                border-top: 3px solid $primDarkColor;
+                margin-top: 2vh;
+
+                .readMoreBtn{
+                    width: 100%;
+                    text-align: center;
+                    padding-top: 2vh;
+                    
+                    svg{
+                        fill: $primDarkColor;
+                        opacity: .7;
+                        &:hover{
+                            opacity: 1;
+                        }
+                    }
+                    
+                }
+
+                .editBtn {
+                    @extend .readMoreBtn;
+                }
+
+                .deleteForm {
+                
+                    .deleteBtn{
+                        background-color: rgb(204, 133, 0);
+                        color: $navColor;
+                        border: 3px solid $navColor;
+                        border-radius: 2rem;
+                        padding:.5rem;
+                        width: 150%;
+                        font-size: 1.1rem;
+                        font-weight: bold;
+                        cursor: pointer;
+                        margin-top: 1rem ;
+                        
+                        &:hover{
+                            background-color: $navColor;
+                            color: $secDarkColor;
+                        }
+                    }
+                }
+            }
+    }
+
+}
+
+.showPostArea{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 3vh auto;
+    background-color: $secDarkColor;
+    padding: 1rem;
+    border-radius: 1rem;
+    color: $primDarkColor;
+
+    h1{
+        border-bottom: 3px solid $primDarkColor;
+    }
+}
+
+.goal{
+    margin-bottom: 2vh;
+}
+
+.process, .outcome{
+    @extend .goal;
+}
+
+.atmDate{
+    margin-bottom: 4vh;
+    color: rgb(70, 70, 70);
+}
+
+.newAndEdit{
+    width: 80%;
+    margin:0 auto;
+
+    h1{
+        font-weight: bold;
+        color: $secDarkColor;
+        border-bottom: 3px solid $textDarkColor;
+    }
+}
+
+.form-group{
+    label{
+        color: $secDarkColor;
+        font-size: 1.5rem;
+    }
+
+    input, textarea{
+        color: $navColor;
+    }
+}
+
+.saveBtn{
+    border: none;
+    background: none;
+    margin: 2vh auto;
+    width: 100%;
+    cursor: pointer;
+
+    & svg:hover{
+        fill: $secDarkColor;
+    }
+}
+
+.deleteBtn{
+    border: none;
+    background: none;
+    width: 100%;
+    cursor: pointer;
+
+    & svg:hover{
+        fill: $secDarkColor;
+    }
+}
+
+footer{
+    @include displayFlex(row);
+    width: 100%;
+    background-color: $secDarkColor;
+    position: fixed;
+    bottom: 0;
+    color: $primDarkColor;
+    margin-top: 5vh;
+}
+
+.gameBody{
+
+    @include displayFlex(column);
+    margin: auto auto;
+    height: 100vh;
+
+    .simpleGame{
+        width: 1000px;
+        height: 400px;
+        border: 3px solid $secDarkColor;
+        overflow: hidden;
+      
+        .char{
+            width: 40px;
+            height: 100px;
+            background-color: $secDarkColor;
+            position: relative;
+            top: 295px;
+            left: 50px;
+            overflow: hidden;
+        }
+
+        .jumpAnimate{
+            animation: jump .5s;
+        }
+
+        .block {
+            width: 40px;
+            height: 40px;
+            background-color: $secDarkColor;
+            position: relative;
+            top: 255px;
+            left: 955px;
+            animation: move 2000ms linear infinite;
+            overflow: hidden;
+        }
+    }
+}
+
+@keyframes move{
+    0%{left: 955px;}
+    100%{left: -80px;}
+}
+
+@keyframes jump{
+    0%{top:295px;}
+    30%{top:195px;}
+    70%{top:195px;}
+    100%{top:295px;}
+}
+
+.score{
+
+    .actualScore{
+        text-align: center;
+    }
+}
+
+.lightMode{
+    background-color: $textDarkColor;
+}
+
+.lightBlog{
+    color: $textDarkColor;
+    border-color: $textDarkColor;
+}
+
+@media only screen and (max-width: 768px) {
+    .logo{
+        .headTitle{
+            font-size: 30px;
+        }
+        img{
+            width: 75px;
+        }
+    }
+
+    .sideImages{
+
+        img{
+            display: none;
+        }
+        
+    }
+  }
+
+  @media only screen and (max-width: 600px) {
+    .logo{
+        .headTitle{
+            padding-bottom: 20px;
+            font-size: 25px;
+        }
+        img{
+            width: 60px;
+        }
+    }
+
+    .postArea{
+        width: 90vh;
+    }
+  }
+

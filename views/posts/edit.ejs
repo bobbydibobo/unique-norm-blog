@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Khand:wght@300;400;500;600;700&display=swap" rel="stylesheet"> 
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Unique:Norm</title>
+</head>
+<body>
+
+  <div class="logo">
+    <h1 class="headTitle" style="padding-top: 0; font-weight: bold;"><span>&lt;</span>unique<span>|</span>norm<span>&gt;</span></h1>
+    </div>
+  
+    <div class="navigation" style="padding: .5vh 0;">
+      <a href="/" class="cancelBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="rgb(245, 245, 245)" width="24" height="24"  viewBox="0 0 24 24"><path d="M24 3.752l-4.423-3.752-7.771 9.039-7.647-9.008-4.159 4.278c2.285 2.885 5.284 5.903 8.362 8.708l-8.165 9.447 1.343 1.487c1.978-1.335 5.981-4.373 10.205-7.958 4.304 3.67 8.306 6.663 10.229 8.006l1.449-1.278-8.254-9.724c3.287-2.973 6.584-6.354 8.831-9.245z"/></svg></a>
+      <form action="/posts/<%= post.id %>?_method=DELETE" method="POST" class="deleteForm">
+        <button type="submit" class="deleteBtn"><svg xmlns="http://www.w3.org/2000/svg" fill="rgb(245, 245, 245)" width="30" height="30" viewBox="0 0 24 24"><path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6 13h-12v-2h12v2z"/></svg></button>
+      </form>
+      <svg xmlns="http://www.w3.org/2000/svg" fill="rgb(245, 245, 245)" width="30" height="30" viewBox="0 0 24 24">
+        <path d="M16 0l-3 9h9l-1.866 2h-14.4l10.266-11zm2.267 13h-14.4l-1.867 2h9l-3 9 10.267-11z"/>
+      </svg>
+    </div>
+
+  <div class="newAndEdit">
+    <h1>Edit Post</h1>
+
+    <form action="/posts/<%= post.id %>?_method=PUT" method="POST">
+      <%- include('_form_fields') %>
+    </form>
+  </div>
+
+</body>
+</html>
